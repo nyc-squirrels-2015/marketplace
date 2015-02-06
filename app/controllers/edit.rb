@@ -1,5 +1,7 @@
 get '/edit/:id' do
   @user = User.find(params[:id])
+  @message_email = flash[:message_email]
+  @message_password = flash[:message_password]
   erb :edit
 end
 
@@ -14,7 +16,7 @@ post '/edit_email' do
   if valid_email(params[:email])
     session[:user].update_attributes(email: params[:email])
   else
-    @message= "This is not a valid email"
+    flash[:message_email]= "This is not a valid email"
   end
   @user = session[:user]
   redirect "/edit/#{@user.id}"
@@ -26,7 +28,7 @@ post '/edit_password' do
   if params[:password] == params[:password_confirmation]
     session[:user].update_attributes(password: params[:password])
   else
-    @message = "The passwords must match"
+    flash[:message_password] = "The passwords must match"
   end
   @user = session[:user]
   redirect "/edit/#{@user.id}"

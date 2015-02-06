@@ -12,7 +12,7 @@ Your email is <%= @user.email %>
 <form action="/edit_email" method="post">
   <input type="text" name="email">
   <input type="submit" value="change">
-</form><%= @message %>
+</form><%= @message_email %>
 <br>
 <li> want to edit your password ? </li>
 <form action="/edit_password" method="post">
@@ -20,7 +20,7 @@ Your email is <%= @user.email %>
   <input type="password" name="password_confirmation">
   confirm
   <input type="submit" value="change">
-</form><%= @message %>
+</form><%= @message_password %>
 </ul>
 
 

@@ -1,0 +1,5 @@
+<h2><%= @item_to_display.name %></h2>
+Description: <%= @item_to_display.description %><br>
+Price: <%= @item_to_display.price %><br>
+
+<a href="/categories/<%= params[:category_id] %>/items/<%= params[:id] %>/update">Edit</a>

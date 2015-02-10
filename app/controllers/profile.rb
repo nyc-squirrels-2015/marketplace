@@ -1,3 +1,6 @@
+#  A "profile" is not a resource. It's the descriptive view of a single User
+# Move this to the Users controller
+
 get '/profiles' do
   @profiles = User.all
   erb :profiles

@@ -1,3 +1,23 @@
+# There's a lot of repeated code here. It's generally a good idea to extrapolate 
+# your data and your seeding logic.
+
+# create a separte file with just model data as JSON, YAML or Ruby hases
+# then importhat that file and run the seeding methods. The external model
+# data would look like this:
+
+# # users.rb
+# ```
+# [
+#   {name: "Ivan", email: "something"}, 
+#   {name: "Rayan", email: "somethingelse"}
+# ]
+# ```
+
+# Then, in this file (seeds.rb) import that file and iterate oer it to seed the db 
+
+# users = File.read('users.rb')
+# users.each do {|user| User.create(user)}
+
 User.create(name: :Ivan,email: "ivan@gmail.com", password: "123", password_confirmation: "123", photo_url: "http://upload.wikimedia.org/wikipedia/commons/7/7b/Donkey_1_arp_750px.jpg")
 User.create(name: :Rayan,email: "rayan@gmail.com", password: "123", password_confirmation: "123", photo_url: "http://images.nationalgeographic.com/wpf/media-live/photos/000/005/cache/grey-wolf_565_600x450.jpg")
 User.create(name: :James,email: "james@gmail.com", password: "123", password_confirmation: "123")

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   $('.edit').on("click", function(){
     $('.edit_form').hide();
     $(this).parent().find('.edit_form').show();

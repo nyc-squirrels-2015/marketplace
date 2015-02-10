@@ -1,4 +1,6 @@
-post '/items/:id/comments/?' do
+# Should this be a comment controller?
+
+post '/items/:id/comments/?' do # what's with the ? mark?
   Comment.create(params)
   redirect back
 end

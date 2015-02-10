@@ -1,3 +1,5 @@
+# Signing up is a User creation. Thisshould be in the User controller
+
 get '/signup' do
   @message = flash[:message]
   erb :signup

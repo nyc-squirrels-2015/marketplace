@@ -1,3 +1,6 @@
+# All of these actions edit something that belongs to the user
+#  Guess what controller these go in!
+
 get '/profiles/:id/edit' do
   @user = User.find(params[:id])
   @message_email = flash[:message_email]

@@ -11,3 +11,4 @@ def valid_email(email)
   return true if email =~ /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/
   false
 end
+# so where does it go?

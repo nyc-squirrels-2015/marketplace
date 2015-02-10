@@ -1,3 +1,5 @@
+
+
 get '/categories' do
   if current_user
     @categories = Category.all

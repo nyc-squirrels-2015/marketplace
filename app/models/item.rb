@@ -1,3 +1,5 @@
+# Y U NO VALIDATIONS!!
+
 class Item < ActiveRecord::Base
   belongs_to :category
   belongs_to :user

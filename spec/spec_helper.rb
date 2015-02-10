@@ -20,3 +20,6 @@ end
 def app
   Sinatra::Application
 end
+
+
+# WHERE ARE ALL YOUR TESTS?!

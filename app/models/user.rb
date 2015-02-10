@@ -1,3 +1,4 @@
+# Y U NO VALIDATIONS!!
 class User < ActiveRecord::Base
   has_secure_password
   has_many :items

@@ -1,3 +1,5 @@
+# All session creation should go here.
+
 # get '/' do
 #   erb :welcome
 # end
